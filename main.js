@@ -4,7 +4,6 @@ function getComputerChoice() {
     let computerSelection = choiceArray[Math.floor(Math.random()*choiceArray.length)];
     return computerSelection;
 }
-getComputerChoice();
 /*prompt user to make a choice for the game*/
 function getUserChoice() {
     return prompt("Make a choice: rock, paper, or scissors?")
@@ -48,7 +47,7 @@ function playGame() {
             computerWinCount += 1;
         }
     }
-    console.log(userWinCount);
+    console.log('The final score after 5 rounds is You ' + userWinCount + ' : ' + computerWinCount + ' Computer');
 }
 
 console.log(playGame())
