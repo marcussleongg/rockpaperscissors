@@ -7,7 +7,7 @@ function getComputerChoice() {
 getComputerChoice();
 /*prompt user to make a choice for the game*/
 function getUserChoice() {
-    let playerSelection = prompt("Make a choice: rock, paper, or scissors?")
+    return prompt("Make a choice: rock, paper, or scissors?")
 }
 /*determine if user or computer wins by comparing the selections made and return a string describing the win/lost/draw*/
 function playRound(computerSelection, playerSelection) { 
@@ -31,12 +31,15 @@ function playRound(computerSelection, playerSelection) {
         return "It's a draw! Scissors and Scissors is a draw"
     }
 }
-let computerSelection = getComputerChoice();
-console.log(playRound(computerSelection, playerSelection));
 /*function to play 5 rounds of rock paper scissors*/
 function playGame() {
     let counter = 0;
     while (counter < 5) {
-
+        let computerSelection = getComputerChoice();
+        let playerSelection = getUserChoice();
+        console.log(playRound(computerSelection, playerSelection));
+        counter += 1;
     }
 }
+
+console.log(playGame())
