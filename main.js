@@ -1,0 +1,1 @@
+const choiceArray = [rock, paper, scissors];
