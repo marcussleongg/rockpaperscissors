@@ -2,13 +2,13 @@ const choiceArray = ['rock', 'paper', 'scissors'];
 /* get a random selection from the computer*/
 function getComputerChoice() {
     let computerSelection = choiceArray[Math.floor(Math.random()*choiceArray.length)];
-    console.log(computerSelection);
+    return computerSelection;
 }
 getComputerChoice();
 /*prompt user to make a choice for the game*/
 let playerSelection = prompt("Make a choice: rock, paper, or scissors?")
-/*determine if user or computer wins by comparing the selections made*/
-function playRound(computerSelection, playerSelection) {
+/*determine if user or computer wins by comparing the selections made and return a string describing the win/lost/draw*/
+function playRound(computerSelection, playerSelection) { 
     if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'rock') {
         return "It's a draw! Rock and Rock is a draw"
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
@@ -29,3 +29,5 @@ function playRound(computerSelection, playerSelection) {
         return "It's a draw! Scissors and Scissors is a draw"
     }
 }
+let computerSelection = getComputerChoice();
+console.log(playRound(computerSelection, playerSelection));
