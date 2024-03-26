@@ -34,12 +34,21 @@ function playRound(computerSelection, playerSelection) {
 /*function to play 5 rounds of rock paper scissors*/
 function playGame() {
     let counter = 0;
+    let userWinCount = 0;
+    let computerWinCount = 0;
     while (counter < 5) {
         let computerSelection = getComputerChoice();
         let playerSelection = getUserChoice();
-        console.log(playRound(computerSelection, playerSelection));
+        let round = playRound(computerSelection, playerSelection);
+        console.log(round)
         counter += 1;
+        if (round.slice(4,7) == 'win') {
+            userWinCount += 1;
+        } else if (round.slice(4,7) == 'los') {
+            computerWinCount += 1;
+        }
     }
+    console.log(userWinCount);
 }
 
 console.log(playGame())
