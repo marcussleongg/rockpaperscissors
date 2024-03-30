@@ -44,6 +44,18 @@ function playGame() {
         let round = playRound(computerSelection, playerSelection);
         console.log(round);
     })
+    paperBtn.addEventListener('click', () => {
+        let playerSelection = paperBtn.textContent;
+        let computerSelection = getComputerChoice();
+        let round = playRound(computerSelection, playerSelection);
+        console.log(round);
+    })
+    scissorsBtn.addEventListener('click', () => {
+        let playerSelection = scissorsBtn.textContent;
+        let computerSelection = getComputerChoice();
+        let round = playRound(computerSelection, playerSelection);
+        console.log(round);
+    })
     //while (counter < 5) {
         //let computerSelection = getComputerChoice();
         //let playerSelection = getUserChoice();
