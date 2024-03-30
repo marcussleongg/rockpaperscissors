@@ -1,0 +1,113 @@
+[33mcommit 0101e1713db5d9ce8162977bc902b54f30c06341[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Sat Mar 30 11:33:10 2024 +0800
+
+    Add an auto refresh page when ok in alert pressed
+
+[33mcommit 10e0fe5fd94f2afed169318b3973a41a711a50bc[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Sat Mar 30 11:00:10 2024 +0800
+
+    Add live score counter
+
+[33mcommit 9a58e2a93e15099dc0ac0bc16f7ea0ffd7d37c38[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Sat Mar 30 10:43:01 2024 +0800
+
+    Add display of the results of each round played
+
+[33mcommit 49db77680c23be871fa011a56bd054b1732c793b[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Sat Mar 30 10:30:33 2024 +0800
+
+    Make other 2 buttons have register user selections
+
+[33mcommit 0203a2609f126486b54304618a2ba7e9b698d513[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Sat Mar 30 10:28:09 2024 +0800
+
+    Make rock button register user selection for round
+
+[33mcommit 59a16e8d7743abee9625d523c00fb2c3c05f9c0b[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Sat Mar 30 10:24:18 2024 +0800
+
+    Add buttons to html and DOM selectors for them
+
+[33mcommit 29854a69780d04abdbea7610c5a4f54b04d5fb3a[m[33m ([m[1;31morigin/rps-ui[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 16:23:31 2024 +0800
+
+    Log final scoreline between user and computer
+
+[33mcommit d4449c737d5e630684ba146eb8c741022e201c2d[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 16:18:49 2024 +0800
+
+    Add user and computer win count and log it
+
+[33mcommit bdd09b175bec5fa6a8e2292ff1edeb3164370060[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 16:06:11 2024 +0800
+
+    Add function to play 5 rounds
+    
+    Function uses a counter to keep count of how many round have been played.
+    Also amended getUserChoice function to return the choice instead of
+    assigning it as type error was thrown intially by the toLowerCase
+    method as it was trying to work on a null value
+
+[33mcommit 0146b6ab3ae0ca77e9034da75686ef67b68b9b5b[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 16:00:57 2024 +0800
+
+    Change prompt for user's choice to a function
+    
+    So that it can be used in the main playGame function
+
+[33mcommit 9797b9299e797197d218552153d47597df4c75ce[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 15:53:22 2024 +0800
+
+    Amend function for computer choice and assign it
+    
+    Function to get computer's choice now returns the choice rather than
+    logging to console.
+    Computer's choice is also now assigned to a global variable.
+    These choices allow the computer's choice to be used in the playRound
+    function.
+
+[33mcommit cd5ca0f625f18f588e6cb44de670dd69863658cd[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 15:46:11 2024 +0800
+
+    Add win/lose/draw conditions based on choices
+
+[33mcommit 5380bdabd1f8d4f5efaeddb15930f5f22caf6c96[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 15:35:58 2024 +0800
+
+    Prompt user to make a choice
+
+[33mcommit c1135dce8d7e542a5e67c183a3d45ee47897f3b2[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 15:24:36 2024 +0800
+
+    Amend array and make function for computer choice
+    
+    Array threw an error because the elements were not in quotations.
+    Function to get computer's choice works by getting a random decimal number
+    and multiplying it by the array's length, then rounding that to a whole
+    number, and selecting the array with that position number.
+
+[33mcommit 0eaf64b222552b413f5e88433c0c99266b92fb81[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 15:19:40 2024 +0800
+
+    Add array from which computer makes a choice
+
+[33mcommit e80c2887222bc157befa550b34280a562597be8d[m
+Author: Marcus Leong <marcusleongjx@gmail.com>
+Date:   Tue Mar 26 15:18:09 2024 +0800
+
+    Create HTML Boilerplate and JavaScript file

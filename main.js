@@ -10,23 +10,23 @@ function getUserChoice() {
 }
 /*determine if user or computer wins by comparing the selections made and return a string describing the win/lost/draw*/
 function playRound(computerSelection, playerSelection) { 
-    if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'rock') {
+    if (playerSelection == 'rock' && computerSelection == 'rock') {
         return "It's a draw! Rock and Rock is a draw"
-    } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
+    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
         return "You lose! Paper beats Rock"
-    } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors') {
+    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return "You win! Rock beats Scissors"
-    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock') {
+    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         return "You win! Paper beats Rock"
-    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'paper') {
+    } else if (playerSelection == 'paper' && computerSelection == 'paper') {
         return "It's a draw! Paper and Paper is a draw"
-    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'scissors') {
+    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
         return "You lose! Scissors beats Paper"
-    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'rock') {
+    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         return "You lose! Rock beats Scissors"
-    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper') {
+    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         return "You win! Scissors beats Paper"
-    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'scissors') {
+    } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
         return "It's a draw! Scissors and Scissors is a draw"
     }
 }
@@ -56,11 +56,11 @@ function playGame() {
         }
         resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`;
         if (userWinCount == 5) {
-            if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
-            {window.location.reload();};
+            setTimeout(() => {if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();}}, 1);
         } else if (computerWinCount == 5) {
-            if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
-            {window.location.reload();};
+            setTimeout(() => {if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();}}, 1);
         }
     })
     paperBtn.addEventListener('click', () => {
@@ -76,11 +76,11 @@ function playGame() {
         }
         resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`;
         if (userWinCount == 5) {
-            if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
-            {window.location.reload();};
+            setTimeout(() => {if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();}}, 1);
         } else if (computerWinCount == 5) {
-            if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
-            {window.location.reload();};
+            setTimeout(() => {if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();}}, 1);
         }
     })
     scissorsBtn.addEventListener('click', () => {
@@ -96,26 +96,14 @@ function playGame() {
         }
         resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`;
         if (userWinCount == 5) {
-            if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
-            {window.location.reload();};
+            setTimeout(() => {if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();}}, 1);
         } else if (computerWinCount == 5) {
-            if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
-            {window.location.reload();};
+            setTimeout(() => {if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();}}, 1);
+            /*setTimeout allows for DOM changes to occur, showing the score, before the alert appears*/
         }
     })
-    //while (counter < 5) {
-        //let computerSelection = getComputerChoice();
-        //let playerSelection = getUserChoice();
-        //let round = playRound(computerSelection, playerSelection);
-        //console.log(round)
-        //counter += 1;
-        //if (round.slice(4,7) == 'win') {
-            //userWinCount += 1;
-        //} else if (round.slice(4,7) == 'los') {
-            //computerWinCount += 1;
-        //}
-    //}
-    //console.log('The final score after 5 rounds is You ' + userWinCount + ' : ' + computerWinCount + ' Computer');
 }
 
 playGame();
