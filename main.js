@@ -38,23 +38,29 @@ function playGame() {
     const rockBtn = document.querySelector('#rock');
     const paperBtn = document.querySelector('#paper');
     const scissorsBtn = document.querySelector('#scissors');
+    const div = document.createElement("div");
+    const body = document.querySelector("body");
+    body.appendChild(div);
     rockBtn.addEventListener('click', () => {
         let playerSelection = rockBtn.textContent;
         let computerSelection = getComputerChoice();
-        let round = playRound(computerSelection, playerSelection);
-        console.log(round);
+        let round = document.createElement("p");
+        round.textContent = playRound(computerSelection, playerSelection);
+        div.appendChild(round);
     })
     paperBtn.addEventListener('click', () => {
         let playerSelection = paperBtn.textContent;
         let computerSelection = getComputerChoice();
-        let round = playRound(computerSelection, playerSelection);
-        console.log(round);
+        let round = document.createElement("p");
+        round.textContent = playRound(computerSelection, playerSelection);
+        div.appendChild(round);
     })
     scissorsBtn.addEventListener('click', () => {
         let playerSelection = scissorsBtn.textContent;
         let computerSelection = getComputerChoice();
-        let round = playRound(computerSelection, playerSelection);
-        console.log(round);
+        let round = document.createElement("p");
+        round.textContent = playRound(computerSelection, playerSelection);
+        div.appendChild(round);
     })
     //while (counter < 5) {
         //let computerSelection = getComputerChoice();
