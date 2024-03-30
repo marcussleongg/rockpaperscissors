@@ -35,6 +35,9 @@ function playGame() {
     let counter = 0;
     let userWinCount = 0;
     let computerWinCount = 0;
+    const rockBtn = document.querySelector('#rock');
+    const paperBtn = document.querySelector('#paper');
+    const scissorsBtn = document.querySelector('#scissors');
     while (counter < 5) {
         let computerSelection = getComputerChoice();
         let playerSelection = getUserChoice();
