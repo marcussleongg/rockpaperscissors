@@ -30,9 +30,8 @@ function playRound(computerSelection, playerSelection) {
         return "It's a draw! Scissors and Scissors is a draw"
     }
 }
-/*function to play 5 rounds of rock paper scissors*/
+/*function to play rounds of rock paper scissors until user or computer reaches score of 5*/
 function playGame() {
-    let counter = 0;
     let userWinCount = 0;
     let computerWinCount = 0;
     const rockBtn = document.querySelector('#rock');
@@ -43,7 +42,7 @@ function playGame() {
     body.appendChild(div);
     const resultDiv = document.createElement("div");
     body.appendChild(resultDiv);
-    resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`
+    resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`;
     rockBtn.addEventListener('click', () => {
         let playerSelection = rockBtn.textContent;
         let computerSelection = getComputerChoice();
@@ -55,7 +54,14 @@ function playGame() {
         } else if (round.textContent.slice(4,7) == 'los') {
             computerWinCount += 1;
         }
-        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`
+        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`;
+        if (userWinCount == 5) {
+            if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();};
+        } else if (computerWinCount == 5) {
+            if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();};
+        }
     })
     paperBtn.addEventListener('click', () => {
         let playerSelection = paperBtn.textContent;
@@ -68,7 +74,14 @@ function playGame() {
         } else if (round.textContent.slice(4,7) == 'los') {
             computerWinCount += 1;
         }
-        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`
+        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`;
+        if (userWinCount == 5) {
+            if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();};
+        } else if (computerWinCount == 5) {
+            if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();};
+        }
     })
     scissorsBtn.addEventListener('click', () => {
         let playerSelection = scissorsBtn.textContent;
@@ -81,7 +94,14 @@ function playGame() {
         } else if (round.textContent.slice(4,7) == 'los') {
             computerWinCount += 1;
         }
-        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`
+        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`;
+        if (userWinCount == 5) {
+            if (!alert(`You are the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();};
+        } else if (computerWinCount == 5) {
+            if (!alert(`The computer is the winner. Final score is You ${userWinCount} : ${computerWinCount} Computer`))
+            {window.location.reload();};
+        }
     })
     //while (counter < 5) {
         //let computerSelection = getComputerChoice();
