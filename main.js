@@ -41,12 +41,21 @@ function playGame() {
     const div = document.createElement("div");
     const body = document.querySelector("body");
     body.appendChild(div);
+    const resultDiv = document.createElement("div");
+    body.appendChild(resultDiv);
+    resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`
     rockBtn.addEventListener('click', () => {
         let playerSelection = rockBtn.textContent;
         let computerSelection = getComputerChoice();
         let round = document.createElement("p");
         round.textContent = playRound(computerSelection, playerSelection);
         div.appendChild(round);
+        if (round.textContent.slice(4,7) == 'win') {
+            userWinCount += 1;
+        } else if (round.textContent.slice(4,7) == 'los') {
+            computerWinCount += 1;
+        }
+        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`
     })
     paperBtn.addEventListener('click', () => {
         let playerSelection = paperBtn.textContent;
@@ -54,6 +63,12 @@ function playGame() {
         let round = document.createElement("p");
         round.textContent = playRound(computerSelection, playerSelection);
         div.appendChild(round);
+        if (round.textContent.slice(4,7) == 'win') {
+            userWinCount += 1;
+        } else if (round.textContent.slice(4,7) == 'los') {
+            computerWinCount += 1;
+        }
+        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`
     })
     scissorsBtn.addEventListener('click', () => {
         let playerSelection = scissorsBtn.textContent;
@@ -61,6 +76,12 @@ function playGame() {
         let round = document.createElement("p");
         round.textContent = playRound(computerSelection, playerSelection);
         div.appendChild(round);
+        if (round.textContent.slice(4,7) == 'win') {
+            userWinCount += 1;
+        } else if (round.textContent.slice(4,7) == 'los') {
+            computerWinCount += 1;
+        }
+        resultDiv.textContent = `You ${userWinCount} : ${computerWinCount} Computer`
     })
     //while (counter < 5) {
         //let computerSelection = getComputerChoice();
@@ -77,4 +98,4 @@ function playGame() {
     //console.log('The final score after 5 rounds is You ' + userWinCount + ' : ' + computerWinCount + ' Computer');
 }
 
-console.log(playGame())
+playGame();
